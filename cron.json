@@ -1,0 +1,11 @@
+[
+  {
+    "name": "explainer-source-cleanup",
+    "cron": "17 * * * *",
+    "handler": "cleanupExplainerSources",
+    "timezone": "UTC",
+    "payload": {
+      "retentionHours": 72
+    }
+  }
+]
