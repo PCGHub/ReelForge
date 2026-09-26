@@ -1,0 +1,342 @@
+[
+  {
+    "name": "Edit and save platform-aware social captions",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "platform-aware social captions",
+      "Facebook longer caption suggestion",
+      "caption editing",
+      "caption persistence"
+    ],
+    "description": "Verifies a creator can review platform-specific captions, edit the Facebook caption, save it, and keep the saved version after reopening the reel.",
+    "steps": [
+      "Open a saved reel in Studio",
+      "Scroll to Social Post Captions",
+      "Select Facebook",
+      "Confirm a longer caption suggestion is present",
+      "Edit the Facebook caption",
+      "Click Save captions",
+      "Leave and reopen the same reel"
+    ],
+    "expected": "The Facebook caption is editable, saves successfully, and the edited caption remains visible after reopening the reel."
+  },
+  {
+    "name": "Keep the free MP4 export workflow available",
+    "viewport": "desktop",
+    "covers": [
+      "WebM preview generation",
+      "WebM preview progress indicator",
+      "free device MP4 conversion",
+      "MP4 download"
+    ],
+    "description": "Verifies the browser WebM preview exposes visible progress while building and keeps the existing free MP4 export workflow available.",
+    "steps": [
+      "Open a saved reel with visuals and narration",
+      "Click Preview WebM",
+      "Confirm the preview button shows a percentage while rendering",
+      "Confirm a progress bar and rendering status are visible",
+      "After the WebM is ready, confirm Free Device Export is visible",
+      "Confirm Convert to MP4 is available"
+    ],
+    "expected": "WebM rendering exposes a 0-100 progress state and status, then the free device MP4 conversion remains available."
+  },
+  {
+    "name": "Keep scene recovery and mobile controls usable",
+    "viewport": "mobile",
+    "covers": [
+      "scene editing",
+      "custom visual upload fallback",
+      "mobile social caption controls"
+    ],
+    "description": "Verifies the social caption panel coexists with the existing scene recovery controls on a mobile viewport.",
+    "steps": [
+      "Open Studio on a mobile viewport",
+      "Open Edit Scene",
+      "Confirm Scene visual source is still available",
+      "Scroll to Social Post Captions",
+      "Confirm platform tabs and Save captions are visible"
+    ],
+    "expected": "Scene recovery remains available and the social caption editor remains usable on mobile."
+  },
+  {
+    "name": "Use the full manual script without a 90-second ceiling",
+    "viewport": "mobile",
+    "covers": [
+      "manual full-script duration",
+      "long-form script import",
+      "automatic runtime calculation"
+    ],
+    "description": "Verifies a long manual story is imported in full and its runtime is derived from the narration rather than capped at 90 seconds.",
+    "steps": [
+      "Open Create new reel",
+      "Keep Use my script selected",
+      "Paste a story longer than 90 seconds",
+      "Confirm Video length shows Auto — Full Script",
+      "Select the desired number of scenes",
+      "Create reel from my script",
+      "Open the Studio scene timeline"
+    ],
+    "expected": "The complete story is preserved, the runtime is calculated from the full narration, and no 90-second limit is applied."
+  },
+  {
+    "name": "Animate a scene image into a real video",
+    "viewport": "desktop",
+    "covers": [
+      "Runway AI image-to-video",
+      "scene video replacement",
+      "animation progress state",
+      "saved animated visual"
+    ],
+    "description": "Verifies a scene with a generated image can be sent to Runway and return as a persisted video visual without removing the existing free motion controls.",
+    "steps": [
+      "Open a saved reel with a generated image",
+      "Click AI Video on a scene",
+      "Confirm the scene shows an AI animation processing state",
+      "Wait for the Runway task to finish",
+      "Confirm the scene visual changes from image to video",
+      "Reopen the reel"
+    ],
+    "expected": "The scene becomes a persisted video visual, the AI processing state clears, and the saved reel still exposes the free motion effects for image scenes."
+  },
+  {
+    "name": "Synchronize captions to an uploaded voice",
+    "viewport": "desktop",
+    "covers": [
+      "uploaded voice narration",
+      "long voice caption synchronization",
+      "stored audio source URL transcription",
+      "word-level caption synchronization",
+      "voice transcription fallback",
+      "complete ElevenLabs voice library selection",
+      "scrollable ElevenLabs voice picker",
+      "Eleven v3 model selection"
+    ],
+    "description": "Verifies an uploaded narration is transcribed with timed words so the caption cues follow the actual recording instead of simple word-count estimates.",
+    "steps": [
+      "Open a saved reel with narration text",
+      "Open the ElevenLabs voice picker",
+      "Confirm the dropdown arrow opens a scrollable list of available voices",
+      "Drag the voice list scrollbar up and down",
+      "Search for a voice by name or label",
+      "Select a voice and confirm it becomes the narration source",
+      "Open Narration model",
+      "Confirm Eleven v3 — Expressive is available",
+      "Select Eleven v3",
+      "Upload an MP3 or WAV voice recording",
+      "Wait for Syncing captions to finish",
+      "Start the WebM preview",
+      "Confirm captions appear in time with the uploaded narration"
+    ],
+    "expected": "The uploaded voice remains usable and the saved caption cues use the recording's word timestamps; if transcription is unavailable, estimated timing remains available as a fallback."
+  },
+  {
+    "name": "Create and retain an Explainer source project",
+    "sanity": false,
+    "viewport": "desktop",
+    "covers": [
+      "Explainer Studio navigation",
+      "explainer project creation",
+      "source video upload",
+      "persistent explainer project"
+    ],
+    "description": "Verifies a signed-in creator can create an explainer project, upload a video source, and see the project in Explainer Studio.",
+    "steps": [
+      "Open Explainer Studio",
+      "Enter a project name",
+      "Choose a small video file",
+      "Upload the source",
+      "Confirm the project card is visible"
+    ],
+    "expected": "The project appears with its source filename and can be reopened."
+  },
+  {
+    "name": "Configure intelligent clip discovery",
+    "viewport": "desktop",
+    "covers": [
+      "target clip duration",
+      "discovery mode",
+      "intelligent cutting workflow"
+    ],
+    "description": "Verifies the creator can choose a target duration and discovery mode before analysis.",
+    "steps": [
+      "Open a source project",
+      "Choose 45 seconds",
+      "Choose Story Moments",
+      "Start clip discovery"
+    ],
+    "expected": "The analysis workflow starts and the interface states that duration is a target rather than a blind cut."
+  },
+  {
+    "name": "Review clip opportunities on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "clip library",
+      "content opportunity score",
+      "clip preview",
+      "mobile Explainer Studio"
+    ],
+    "description": "Verifies analyzed opportunities remain usable on mobile.",
+    "steps": [
+      "Open an analyzed project",
+      "Review the clip library",
+      "Tap Preview real clip",
+      "Confirm a playable MP4 is produced",
+      "Confirm score, timing, rationale and Create Explainer action"
+    ],
+    "expected": "Each opportunity exposes a real rendered source preview plus score, timing, rationale and a clear next action."
+  },
+  {
+    "name": "Reject a non-video upload",
+    "viewport": "mobile",
+    "covers": [
+      "source video validation",
+      "invalid upload guardrail",
+      "user-visible error state"
+    ],
+    "description": "Verifies invalid source files are rejected without creating an invalid project.",
+    "steps": [
+      "Open Explainer Studio",
+      "Enter a project name",      "Choose a non-video file"
+    ],
+    "expected": "A visible validation message asks for a video file and no invalid project is created."
+  },
+  {
+    "name": "Upload a large source with verified chunk integrity",
+    "viewport": "mobile",
+    "covers": [
+      "chunked large video upload",
+      "server-confirmed upload progress",
+      "upload speed and ETA",
+      "large-file crash prevention",
+      "per-chunk SHA-256 verification",
+      "source byte-length verification"
+    ],
+    "description": "Verifies a large source is uploaded in chunks with progress tied to confirmed bytes, per-chunk hashes and exact byte lengths instead of a fake timer or whole-file base64 conversion.",
+    "steps": [
+      "Open Explainer Studio",
+      "Enter a project name",
+      "Choose a large video source",
+      "Start upload",
+      "Observe uploaded MB and percentage increase as chunks are confirmed",
+      "Wait for upload completion"
+    ],
+    "expected": "The upload advances from confirmed bytes, reaches 100% only after finalization succeeds, and shows a completed source project without the browser needing to load the entire video into one base64 string."
+  },
+  {
+    "name": "Keep processing separate from upload completion",
+    "viewport": "mobile",
+    "covers": [
+      "upload-complete state",
+      "separate analysis processing state",
+      "no premature 99 percent state"
+    ],
+    "description": "Verifies the UI does not hold the upload at 99 percent while later processing is occurring.",
+    "steps": [
+      "Upload a source video",
+      "Confirm the upload reaches 100% and shows Upload complete",
+      "Open the source project",
+      "Start intelligent analysis",
+      "Observe the separate processing message"
+    ],
+    "expected": "100% represents completed upload only, while audio extraction, transcription and semantic analysis are shown as a separate processing stage."
+  },
+  {
+    "name": "Show honest elapsed timing during intelligent clip discovery",
+    "viewport": "desktop",
+    "covers": [
+      "intelligent clip discovery progress",
+      "elapsed processing timer",
+      "synchronized processing progress",
+      "analysis ETA"
+    ],
+    "description": "Verifies intelligent clip discovery exposes visible progress tied to its processing stages and an elapsed timer with an estimated remaining time when enough progress exists.",
+    "steps": [
+      "Open a source-ready Explainer project",
+      "Choose a target duration and discovery mode",
+      "Click Find intelligent clips",
+      "Observe the processing percentage and progress bar",
+      "Observe the elapsed timer and estimated remaining time",
+      "Wait for analysis to finish"
+    ],
+    "expected": "The analysis UI shows stage progress that advances with real processing milestones, an elapsed timer that advances while work is active, and an estimated remaining time without claiming a fake completion state."
+  },
+  {
+    "name": "Prepare persistent Explainer source for analysis",
+    "viewport": "mobile",
+    "covers": [
+      "persistent source preparation",
+      "server-side media copy",
+      "no browser full-file reassembly"
+    ],
+    "description": "Verifies a reopened source project is prepared from persistent chunks without reconstructing the entire source video in browser memory.",
+    "steps": [
+      "Open a completed Explainer project",
+      "Observe source preparation progress",
+      "Confirm a source thumbnail appears",
+      "Confirm Find intelligent clips becomes available"
+    ],
+    "expected": "The original source is prepared for the analysis pipeline without asking for a re-upload or rebuilding the full source into a browser Blob."
+  },
+  {
+    "name": "Show persistent source diagnostics after reopening",
+    "viewport": "mobile",
+    "covers": ["persistent source diagnostics", "chunk integrity visibility", "provider storage failure visibility", "no re-upload requirement"],
+    "description": "Verifies reopening a stored source exposes chunk verification and media-provider diagnostics before analysis without requiring another upload.",
+    "steps": ["Open a completed Explainer project", "Observe the source diagnostics panel", "Confirm chunk verification counts and provider status are visible", "Confirm the project states the permanent chunks remain retained"],
+    "expected": "The reopened project shows persistent source diagnostics, including chunk/byte verification and provider availability or failure, while keeping the stored source available without re-uploading."
+  },
+  {
+    "name": "Analyze source video directly with timed transcription",
+    "viewport": "desktop",
+    "covers": [
+      "MKV source transcription",
+      "ElevenLabs source URL transcription",
+      "timed semantic discovery"
+    ],
+    "description": "Verifies intelligent discovery uses the persistent source video directly for transcription and then produces source-grounded opportunities.",
+    "steps": [
+      "Open a source-ready Explainer project",
+      "Wait for source preparation",
+      "Choose a target duration and discovery mode",
+      "Click Find intelligent clips",
+      "Observe transcription then semantic scoring",
+      "Review opportunities"
+    ],
+    "expected": "The original source video is transcribed directly by the speech-to-text provider and the resulting opportunities contain source-grounded timestamps."
+  },
+  {
+    "name": "Verify persistent source chunk integrity before analysis",
+    "viewport": "desktop",
+    "covers": [
+      "source integrity verification",
+      "per-chunk SHA-256 validation",
+      "complete source byte validation",
+      "MKV container signature validation"
+    ],
+    "description": "Verifies an existing Explainer source is checked from persistent chunks before ReelForge treats it as valid.",
+    "steps": [
+      "Open a completed Explainer project",
+      "Wait for source integrity verification",
+      "Confirm the source shows as verified when all chunks are intact"
+    ],
+    "expected": "ReelForge verifies every expected chunk, validates byte length and SHA-256 hash, checks total bytes, and validates the MKV container signature when applicable."
+  },
+  {
+    "name": "Render a real source clip preview",
+    "viewport": "mobile",
+    "covers": [
+      "real source clip rendering",
+      "MP4 clip preview",
+      "timestamped opportunity preview"
+    ],
+    "description": "Verifies an analyzed opportunity can be rendered from the original source into a playable MP4.",
+    "steps": [
+      "Open an analyzed Explainer project",
+      "Tap Preview real clip on an opportunity",
+      "Wait for the render to finish",
+      "Open the returned MP4"
+    ],
+    "expected": "The returned video is a real rendered segment from the source at the opportunity timestamps."
+  }
+]
